@@ -1,4 +1,5 @@
 #include "changecase.h"
+#include <random>
 
 void toggle_case(std::ifstream & inFile, std::ofstream & outFile) {
 	int ch;
@@ -53,4 +54,25 @@ void to_title_case(std::ifstream & inFile, std::ofstream & outFile) {
 		}
 		outFile.put(ch);
 	}
+}
+
+void random(std::ifstream& inFile, std::ofstream& outFile) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(1, 2);
+
+    int rrr = dis(gen);
+    int ch;
+    
+    if (rrr == 1) {
+        while ((ch = inFile.get()) != EOF) {
+            if (ch >= 'a' && ch <= 'z') {
+                ch = (ch - 'a') + 'A';
+            }
+            else if (ch >= 'A' && ch <= 'Z') {
+                ch = (ch - 'A') + 'a';
+            }
+        }
+		outFile.put(ch)
+    }
 }
