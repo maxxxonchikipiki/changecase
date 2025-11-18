@@ -1,3 +1,5 @@
+[![C/C++ CI](https://github.com/maxxxonchikipiki/changecase/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/maxxxonchikipiki/changecase/actions/workflows/c-cpp.yml)
+
 # Конвертер регистров 
 
 Учебный проект.
@@ -19,5 +21,6 @@ changecase -key source_file destinstion_filename
 - "-U" нижний - ВЕРХНИЙ  
 - "-G" ВЕРХНИЙ - нижний, нижний - ВЕРХНИЙ  
 - "-T" первая буква - ВЕРХНИЙ, другие буквы - нижний
+
 
 
