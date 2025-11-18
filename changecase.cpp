@@ -57,22 +57,25 @@ void to_title_case(std::ifstream & inFile, std::ofstream & outFile) {
 }
 
 void random(std::ifstream& inFile, std::ofstream& outFile) {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, 2);
-
-    int rrr = dis(gen);
     int ch;
     
-    if (rrr == 1) {
-        while ((ch = inFile.get()) != EOF) {
-            if (ch >= 'a' && ch <= 'z') {
-                ch = (ch - 'a') + 'A';
-            }
-            else if (ch >= 'A' && ch <= 'Z') {
-                ch = (ch - 'A') + 'a';
-            }
-        }
-		outFile.put(ch)
+    while ((ch = inFile.get()) != EOF) {
+
+		std::random_device rd;
+    	std::mt19937 gen(rd());
+    	std::uniform_int_distribution<> dis(1, 2);
+    	int rrr = dis(gen);
+		
+		if (rrr == 1){
+	        if (ch >= 'a' && ch <= 'z') {
+	            ch = (ch - 'a') + 'A';
+	        }
+	        else if (ch >= 'A' && ch <= 'Z') {
+	            ch = (ch - 'A') + 'a';
+	        }
+		}
     }
+	outFile.put(ch)
 }
+
+
