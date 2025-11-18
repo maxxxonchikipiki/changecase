@@ -73,8 +73,5 @@ void random(std::ifstream& inFile, std::ofstream& outFile) {
 	        }
 		}
     }
-	outFile.put(ch)
+	outFile.put(ch);
 }
-
-
-
