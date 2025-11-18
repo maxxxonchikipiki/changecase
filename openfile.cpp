@@ -54,6 +54,9 @@ int main(int argc, char* argv[]) {
 	else if (strcmp(argv[1], "-T") == 0) {
 		to_title_case(inFile, outFile);
 	}
+	else if (strcmp(argv[1], "-R") == 0) {
+		random(inFile, outFile);
+	}
 	else {
 		help();
 	}
@@ -63,4 +66,5 @@ int main(int argc, char* argv[]) {
 
 	return 0;
 }
+
 
