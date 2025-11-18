@@ -9,6 +9,7 @@ void help() {
 	std::cout << "\t-U - to upper case" << std::endl;
 	std::cout << "\t-G - to toggle case" << std::endl;
 	std::cout << "\t-T - to title case\n" << std::endl;
+	std::cout << "\t-R - to convert chars in random registers\n" << std::endl;
 }
 
 
@@ -62,3 +63,4 @@ int main(int argc, char* argv[]) {
 
 	return 0;
 }
+
